@@ -5,7 +5,7 @@ catfish==1.4.4
 certifi==2018.1.18
 chardet==3.0.4
 command-not-found==0.3
-cryptography==2.1.4
+cryptography==2.3
 cupshelpers==1.0
 cycler==0.10.0
 -e git+https://github.com/LCAS/deep_rl_for_swarms.git@3f1b8bf1c89abbcd40a81ee653c69f261827637d#egg=deep_rl_for_swarms
