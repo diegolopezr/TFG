@@ -1,0 +1,5 @@
+[1, 0, 1, 1]    -->  (x^3 + x + 1)   (7,4) binary cyclic Hamming with dmin=3
+[1,0,0,1,1]   -->  (x^4 + x + 1)   (15,11) binary cyclic Hamming with dmin=3
+[1,1,1,0,1,0,0,0,1]  -->  (x^4 + x + 1)(x^4 + x^3 + x^2 + x + 1)    (15,7) 2-error-correcting BCH with dmin=5
+[1,0,1,0,0,1,1,1,1,1,1]  -->  (x^4 + x + 1)(x^4 + x^3 + x^2 + x + 1)(x^2 + x + 1) (15,5) 3EC BCH with dmin=7
+[1,1,1,1,0,1,0,1,1,0,0,1]  -->  (x^4 + x + 1)(x^4 + x^3 + x^2 + x + 1)(x^2 + x + 1)(x + 1) (15,4) maximum-length with dmin=8
