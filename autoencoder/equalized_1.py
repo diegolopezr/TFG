@@ -57,7 +57,7 @@ def create_autoencoder(n, k):
 
     EbNo_train = 10**0.8  # converted 8 dB of EbNo
     noise_input = Input(shape=(n+2,), name='Noise_input')
-    gaussian = GaussianNoise(np.sqrt(1 / (2 * R * EbNo_train)))(noise_input)
+    gaussian = GaussianNoise(np.sqrt(1 / (2 * k * EbNo_train)))(noise_input)
     equalized_gaussian = Lambda(filter_noise, name='Equalize')(gaussian)
     encoded3 = Add()([encoded2_, equalized_gaussian])
 
