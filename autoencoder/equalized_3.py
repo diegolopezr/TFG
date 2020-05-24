@@ -70,7 +70,7 @@ def create_autoencoder(n, k):
     filtered_signal = Lambda(filter_signal, name='signal_equalizer')(concatenated_data)
 
     EbNo_train = 10**0.8  # converted 8 dB of EbNo
-    encoded3 = GaussianNoise(np.sqrt(1 / (2 * R * EbNo_train)))(filtered_signal)
+    encoded3 = GaussianNoise(np.sqrt(1 / (2 * k * EbNo_train)))(filtered_signal)
 
     decoded = Dense(M, activation='relu', name='relu_2')(encoded3)
     decoded1 = Dense(M, activation='softmax', name='softmax')(decoded)
