@@ -39,7 +39,7 @@ def create_autoencoder(n, k):
     encoded2_ = Lambda(lambda x: K.l2_normalize(x, axis=-1), name='Energy_normalizing')(encoded2)
 
     EbNo_train = 10**0.75  # converted 7.5 dB of EbNo
-    encoded3 = GaussianNoise(np.sqrt(1 / (2 * R * EbNo_train)))(encoded2_)
+    encoded3 = GaussianNoise(np.sqrt(1 / (2 * k * EbNo_train)))(encoded2_)
 
 
     decoded = Dense(M, activation='relu', name='relu_2')(encoded3)
