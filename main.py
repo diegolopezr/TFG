@@ -25,7 +25,7 @@ print('M:', M, 'k:', k, 'n:', n_channel, 'Rate:', R)
 # encoder, decoder = gaussian.create_autoencoder(n_channel, k)
 encoder, decoder = equalized_1.create_autoencoder(n_channel, k)
 
-N = 1000000
+N = 10000000
 test_label = np.random.randint(M, size=N)
 test_data = []
 
